@@ -1,0 +1,24 @@
+<div class="text-center main posts-show">
+    <div class="posts-show-item" >
+    <h1>
+        Content
+    </h1>
+    <h3>
+        <%= @blog.content %>
+    </h3>
+    <h1>
+        Created_at
+    </h1>
+    <h3>
+        <%= @blog.created_at %>
+    </h3>
+    <div>
+        <div class="btn btn-default btn-lg">
+            <%= link_to "EDIT", edit_blog_path(@blog.id) %>
+        </div>
+        <div class="btn btn-default btn-lg">
+            <%= link_to 'DELETE', blog_path(@blog.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %>
+        </div>
+    </div>
+    </div>
+</div>

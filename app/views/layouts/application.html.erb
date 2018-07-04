@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tweetexam</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container"> 
+    <nav class="navbar navbar-default" style="background-color: #D8D8D8;">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav home-bar">
+          <li>
+            <a href="/"><span class="glyphicon glyphicon-home"></span> HOME</a>
+          </li>
+          <li>
+            <a href="/blogs/new"><span class="glyphicon glyphicon-pencil"></span> NEW_BLOG</a>
+          </li>
+          <li>
+            <a href="/blogs"><span class="glyphicon glyphicon-folder-close"></span> INDEX</a>
+          </li>
+          <li>
+            <a href="/about"><span></span> ABOUT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <%= yield %>
+    </div> 
+    <footer class=" text-center" style="color:blue;">
+    <p>Phase3_Bootstrap  2018 Dive_Into_Code_Student.</p>
+  </footer>
+  </body>
+</html>

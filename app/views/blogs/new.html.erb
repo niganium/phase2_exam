@@ -1,0 +1,28 @@
+<div class="text-center">
+<%= form_with(model: @blog, local: true) do |form| %>
+
+
+<% if @blog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @blog.errors.count %>件のエラーがあります。</h2>
+      <ul>
+
+      <% @blog.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
+  
+   <div class="blog_title">
+    <h3>
+        <%= form.label  :content %>
+    </h3>
+    <%= form.text_area :content, size: "50x12" %>
+  </div>
+  <%= form.submit "Tweet", size: "50x12" %>
+<% end %>
+</div>
+
